@@ -9,22 +9,22 @@ const router = createBrowserRouter([
     element: <HomeLayout />,
     errorElement: <Error />,
   },
-      {
-        path: '/landing',
-        element: <Landing />
-      },
-      {
-        path:'/login',
-        element: <Login/>
-      },
-      {
-        path: '/register',
-        element: <Register/>
-      },
-      {
-        path:'/dashboard',
-        element: <DashboardLayout/>
-      },
+  {
+    path: '/landing',
+    element: <Landing />
+  },
+  {
+    path:'/login',
+    element: <Login/>
+  },
+  {
+    path: '/register',
+    element: <Register/>
+  },
+  {
+    path:'/dashboard',
+    element: <DashboardLayout/>
+  },
   {
     path:'/about',
     element:(<div>
