@@ -1,13 +1,30 @@
 import {createBrowserRouter,RouterProvider} from 'react-router-dom';
 import './App.css';
-import { HomeLayout, DashboardLayout } from './pages';
+import { HomeLayout, DashboardLayout, Error, Landing } from './pages';
 import { Login,Register } from './components';
 
 const router = createBrowserRouter([
   {
     path:'/',
-    element: <HomeLayout />
+    element: <HomeLayout />,
+    errorElement: <Error />,
   },
+      {
+        path: '/landing',
+        element: <Landing />
+      },
+      {
+        path:'/login',
+        element: <Login/>
+      },
+      {
+        path: '/register',
+        element: <Register/>
+      },
+      {
+        path:'/dashboard',
+        element: <DashboardLayout/>
+      },
   {
     path:'/about',
     element:(<div>
@@ -15,19 +32,6 @@ const router = createBrowserRouter([
                 <h1>What are you thinking today</h1>
             </div>)
   },
-  {
-    path:'/login',
-    element: <Login/>
-  },
-  {
-    path: '/register',
-    element: <Register/>
-  },
-  {
-    path:'/dashboard',
-    element: <DashboardLayout/>
-  },
-  
 ])
 
 function App() {
