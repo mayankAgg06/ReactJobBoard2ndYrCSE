@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link,Outlet } from "react-router-dom";
 
 const HomeLayout=()=>{
     return (
@@ -9,6 +9,7 @@ const HomeLayout=()=>{
             <Link to='/login'>Login Page</Link>
             <Link to='/register'>Register Page</Link>
             <Link to='/dashboard'>Dashboard Page</Link>
+            <Outlet />
         </div>
     )
 }
