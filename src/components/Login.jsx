@@ -1,13 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link,Outlet } from "react-router-dom";
 
-const Login=()=>{
+const HomeLayout=()=>{
     return (
         <div>
-            <h1>This Login Page is being opened through the file</h1>
-            <h2>Sorry, through the external file</h2>
-             <Link to='/register'>Register here</Link>
+           <h1>This is Login page</h1>
+           <Link to='/register'>Click here for register page</Link>
         </div>
     )
 }
 
-export default Login;
+export default HomeLayout;

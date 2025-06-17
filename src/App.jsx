@@ -8,22 +8,28 @@ const router = createBrowserRouter([
     path:'/',
     element: <HomeLayout />,
     errorElement: <Error />,
-  },
-  {
-    path: '/landing',
-    element: <Landing />
-  },
-  {
-    path:'/login',
-    element: <Login/>
-  },
-  {
-    path: '/register',
-    element: <Register/>
-  },
-  {
-    path:'/dashboard',
-    element: <DashboardLayout/>
+    children: [
+      {
+        index: true,
+        element: <Landing />
+      },
+      {
+        path: 'landing',
+        element: <Landing />
+      },
+      {
+        path:'login',
+        element: <Login/>
+      },
+      {
+        path: 'register',
+        element: <Register/>
+      },
+      {
+        path:'dashboard',
+        element: <DashboardLayout/>
+      },
+    ]
   },
   {
     path:'/about',
